@@ -1,0 +1,80 @@
+<style>
+  .smile {
+    height: 52px;
+    width: 64px;
+    border-radius: 26px;
+    background-color: rgb(255, 221, 227);
+    transition: all 1.5s;
+    margin-left: 380px;
+    margin-top: 400px;
+    position: relative; /* Added for absolute positioning of spans */
+  }
+
+  .smile span {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition:
+     opacity 0.2s;
+  }
+
+  /* Hover state */
+  .smile:hover {
+    background-color: rgb(246, 195, 204);
+    font-weight: bold;
+    color: red;
+    box-shadow: 10px 5px 10px rgba(77, 52, 159, 0.3);
+  }
+
+  /* Active state */
+  .smile:active {
+    background-color: rgb(179, 179, 255);
+    color: rgb(36, 66, 172);
+  }
+
+  /* Default state */
+  .default-text {
+    opacity: 1;
+  }
+
+  .hover-text {
+    opacity: 0;
+  }
+
+  .active-text {
+    opacity: 0;
+  }
+
+  /* Show hover text */
+  .smile:hover .default-text {
+    opacity: 0;
+  }
+
+  .smile:hover .hover-text {
+    opacity: 1;
+  }
+
+  .smile:hover .active-text {
+    opacity: 0;
+  }
+
+  /* Show active text */
+  .smile:active .default-text {
+    opacity: 0;
+  }
+
+  .smile:active .hover-text {
+    opacity: 0;
+  }
+
+  .smile:active .active-text {
+    opacity: 1;
+  }
+</style>
+
+<button class="smile"> 
+  <span class="default-text">^_^</span>
+  <span class="hover-text">X_X</span>
+  <span class="active-text">x_x</span>
+</button>
